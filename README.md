@@ -16,8 +16,8 @@
 <p align="left">
 <a href="https://linkedin.com/in/krish-vaghasia" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="krish-vaghasia" height="30" width="40" /></a>
 <a href="https://stackoverflow.com/users/26774030" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="26774030" height="30" width="40" /></a>
-<a href="https://instagram.com/krish-v-007" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="krish-v-007" height="30" width="40" /></a>
-<a href="https://codeforces.com/profile/krish-v-0610" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="krish-v-0610" height="30" width="40" /></a>
+<a href="https://instagram.com/krish_v_007" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="krish-v-007" height="30" width="40" /></a>
+<a href="https://codeforces.com/profile/KRISH_V_0610" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="krish-v-0610" height="30" width="40" /></a>
 <a href="https://www.leetcode.com/krish_v_0610" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="krish_v_0610" height="30" width="40" /></a>
 <a href="https://auth.geeksforgeeks.org/user/vaghasiarez1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="vaghasiarez1" height="30" width="40" /></a>
 </p>
