@@ -6,7 +6,7 @@
 
 - 🌱 I’m currently learning **Backend Development with Node.js**
 
-- 👨‍💻 All of my projects are available at [(Currently deployed links of Projects are inside Github Repository's ReadMe files only)]((Currently deployed links of Projects are inside Github Repository's ReadMe files only))
+- 👨‍💻 All of my projects are available at-(Currently deployed links of my Projects are inside Github Repository's ReadMe files only)
 
 - 💬 Ask me about **react**
 
