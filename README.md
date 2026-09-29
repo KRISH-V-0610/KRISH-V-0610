@@ -12,8 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/about.svg" width="53%" align="top" alt="Final-year CSE at Nirma University (minor in Adaptive AI). I build backends that stay up when traffic stops behaving: horizontally scaled real-time systems, fault-tolerant WebSocket layers, and the service, data and CI/CD plumbing that gets AI features into production.">
-  <img src="assets/sketch-amber.svg" width="44%" align="top" alt="Krish Vaghasia, rendered as coloured ASCII">
+  <img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/about.svg" width="100%" alt="Final-year CSE at Nirma University (minor in Adaptive AI). I build backends that stay up when traffic stops behaving: horizontally scaled real-time systems, fault-tolerant WebSocket layers, and the service, data and CI/CD plumbing that gets AI features into production.">
 </p>
 
 <p align="center">

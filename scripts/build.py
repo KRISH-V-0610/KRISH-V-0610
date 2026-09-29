@@ -378,39 +378,45 @@ def section(num: int, title: str, note: str) -> Svg:
 
 
 def about(cfg) -> Svg:
-    Wd = 470
+    """Full-width terminal card: about.txt on the left, now.txt on the right."""
     size, lh = 11.5, 19
-    body_w = Wd - 56
-    summary = wrap(cfg["about"]["summary"], body_w, "mono", size)
-    keyw = max(tw(k, "bold", size) for k, _ in cfg["about"]["now"]) + 18
-    now_rows = [(k, wrap(v, body_w - keyw - 14, "mono", size)) for k, v in cfg["about"]["now"]]
-    H = 58 + lh + len(summary) * lh + 18 + lh + sum(len(v) for _, v in now_rows) * lh + 8 + lh + 22
-    s = Svg(Wd, H, "about: " + cfg["about"]["summary"])
-    panel(s, 0, 0, Wd, H, "~/about", "zsh")
-    y = 62
+    lx, split, rx = 28, 454, 486          # left text x, divider x, right column x
+    summary = wrap(cfg["about"]["summary"], split - lx - 26, "mono", size)
+    keyw = max(tw(k, "bold", size) for k, _ in cfg["about"]["now"]) + 16
+    vx = rx + 14 + keyw
+    now_rows = [(k, wrap(v, W - 28 - vx, "mono", size)) for k, v in cfg["about"]["now"]]
+    rows_left = 1 + len(summary)
+    rows_right = 1 + sum(len(v) for _, v in now_rows) + 1
+    H = 62 + max(rows_left, rows_right) * lh + 18
+    s = Svg(W, H, "about: " + cfg["about"]["summary"] + " Now: "
+            + "; ".join(f"{k} {v}" for k, v in cfg["about"]["now"]))
+    panel(s, 0, 0, W, H, "~/about", "zsh")
+    s.add(f'<path d="M{split} 52V{H - 22}" stroke="{EDGE}" stroke-dasharray="2 4"/>')
 
-    def prompt(cmd):
-        nonlocal y
-        s.add(f'<text x="28" y="{y}" class="mono" font-size="{size}"><tspan fill="{AMBER}">$</tspan>'
+    def prompt(x, y, cmd):
+        s.add(f'<text x="{x}" y="{y}" class="mono" font-size="{size}"><tspan fill="{AMBER}">$</tspan>'
               f'<tspan fill="{DIM}"> {escape(cmd)}</tspan></text>')
         s.used["mono"].update("$ " + cmd)
-        y += lh
 
-    prompt("cat about.txt")
+    y = 66
+    prompt(lx, y, "cat about.txt")
     for line in summary:
-        s.text(28, y, line, "mono", size, TEXT)
         y += lh
-    y += 18
-    prompt("cat now.txt")
+        s.text(lx, y, line, "mono", size, TEXT)
+
+    y = 66
+    prompt(rx, y, "cat now.txt")
     for k, vals in now_rows:
-        s.add(f'<path d="M28 {y - 8.5}l5 3.5-5 3.5z" fill="{AMBER}" filter="url(#glow)"/>')
-        s.text(42, y, k, "bold", size, AMBER)
-        for v in vals:
-            s.text(42 + keyw, y, v, "mono", size, TEXT)
-            y += lh
-    y += 8
-    s.add(f'<text x="28" y="{y}" class="mono" font-size="{size}" fill="{AMBER}">$</text>')
-    s.add(f'<rect x="{28 + tw("$ ", "mono", size)}" y="{y - 11}" width="7" height="14" fill="{AMBER}" filter="url(#glow)">'
+        y += lh
+        s.add(f'<path d="M{rx} {y - 8.5}l5 3.5-5 3.5z" fill="{AMBER}" filter="url(#glow)"/>')
+        s.text(rx + 14, y, k, "bold", size, AMBER)
+        for i, v in enumerate(vals):
+            if i:
+                y += lh
+            s.text(vx, y, v, "mono", size, TEXT)
+    y += lh
+    s.add(f'<text x="{rx}" y="{y}" class="mono" font-size="{size}" fill="{AMBER}">$</text>')
+    s.add(f'<rect x="{n(rx + tw("$ ", "mono", size))}" y="{y - 11}" width="7" height="14" fill="{AMBER}" filter="url(#glow)">'
           '<animate attributeName="opacity" dur="1.05s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.5" values="1;0"/></rect>')
     return s
 
