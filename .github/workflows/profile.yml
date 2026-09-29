@@ -1,0 +1,58 @@
+name: profile
+
+# Renders every card in README.md and publishes them to the `output` branch.
+# Runs twice a day, whenever the config/renderer changes, or by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - profile.json
+      - scripts/**
+      - .github/workflows/profile.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-render
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      # 1. the snake, eating the real contribution grid
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            .snk/snake.svg?palette=github-dark
+
+      # 2. every other card, plus the glow + amber restyle of the snake
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install fonttools brotli
+      - run: python scripts/build.py --snake .snk/snake.svg
+        env:
+          # Optional: add a classic PAT (read:user) as PROFILE_TOKEN to count private contributions.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+
+      # 3. publish to the `output` branch as a single commit (keeps main's history clean)
+      - name: publish
+        working-directory: dist
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git init -q -b output
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "render @ ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
