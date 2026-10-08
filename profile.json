@@ -6,18 +6,64 @@
   "roles": [
     "backend systems engineer",
     "real-time · distributed · fault-tolerant",
-    "agentic ai → production rest apis",
-    "national runner-up, isro bah 2025"
+    "agentic ai → production rest apis"
   ],
   "meta": "CSE '27 @ NIRMA UNIVERSITY  ·  AHMEDABAD, IN  ·  OPEN TO BACKEND & SYSTEMS ROLES",
 
-  "about": {
-    "summary": "Final-year CSE at Nirma University (minor in Adaptive AI). I build backends that stay up when traffic stops behaving: horizontally scaled real-time systems, fault-tolerant WebSocket layers, and the service, data and CI/CD plumbing that gets AI features into production.",
-    "now": [
-      ["building", "production ERP @ Radhe Engineering, 20+ daily users"],
-      ["shipped", "backend @ Atlas AI Labs · agentic GIS @ ISRO NRSC"],
-      ["learning", "distributed systems internals, queues, consensus"],
-      ["open to", "backend & systems engineering roles"]
+  "story": {
+    "intro": "I build backends that stay up when traffic stops behaving.\nHere's how I got here, one chapter at a time.",
+    "chapters": [
+      {
+        "year": "2023",
+        "month": "jul",
+        "short": "the first compile",
+        "title": "The first compile",
+        "kicker": "Nirma University · B.Tech CSE, minor in Adaptive AI",
+        "text": "Started a CSE degree at Nirma University with a minor in Adaptive AI. The early semesters went into fundamentals: data structures, algorithms, and plenty of LeetCode and Codeforces problems.",
+        "chips_label": "practised",
+        "chips": ["C++", "data structures", "algorithms", "competitive programming"]
+      },
+      {
+        "year": "2024",
+        "month": "sep",
+        "short": "paper to production",
+        "title": "Paper to production",
+        "kicker": "Radhe Engineering Works · Lead Software Engineer, part-time",
+        "text": "An engineering business in Ahmedabad still ran inventory, orders and production tracking on paper. I built them an ERP from scratch and own every part of it: requirements, architecture, database design, deploys and maintenance. 20+ people use it every day, and it taught me that production is where the real requirements show up.",
+        "chips_label": "owned",
+        "chips": ["requirements", "architecture", "database design", "deploys", "maintenance"]
+      },
+      {
+        "year": "2026",
+        "month": "apr",
+        "short": "founding engineer",
+        "title": "Founding engineer",
+        "kicker": "Atlas AI Labs · Founding Engineer, Backend · SSIP 2.0 grantee",
+        "text": "Joined an AI startup incubated at Nirma's E-Cell as its founding backend engineer. I owned the backend end to end, from service design and data modelling to containerised deploys and CI/CD, and put agentic AI, LLM and deep-learning services behind production REST APIs for healthcare and fintech products.",
+        "chips_label": "built with",
+        "chips": ["microservices", "REST APIs", "Docker", "CI/CD", "React"]
+      },
+      {
+        "year": "2026",
+        "month": "may",
+        "short": "asking satellites",
+        "title": "Asking satellites questions",
+        "kicker": "NRSC, ISRO · AI Systems Engineering Intern · Hyderabad",
+        "text": "That summer, at ISRO's National Remote Sensing Centre, I built VYOM: an agentic GIS system you question in plain language, which works through ResourceSat-2/2A imagery to answer. Through a QGIS plugin it automated flood, wildfire, drought and landslide analysis across 6 disaster events and 300+ satellite scenes.",
+        "chips_label": "built with",
+        "chips": ["LangGraph", "Sarvam AI", "FastAPI", "PostGIS", "QGIS"]
+      },
+      {
+        "year": "now",
+        "month": "",
+        "short": "what's next",
+        "title": "What's next",
+        "kicker": "Final year · open to backend & systems roles",
+        "text": "Final year, and still the engineer behind the ERP. Next I want a team where the hard part is keeping systems correct and fast under real load. Meanwhile I'm digging into distributed systems internals: queues, consensus and orchestration.",
+        "chips_label": "reading",
+        "chips": ["distributed systems", "queues", "consensus", "orchestration"],
+        "now": true
+      }
     ]
   },
 
@@ -30,88 +76,6 @@
     ["frontend", [["react", "React"], ["nextdotjs", "Next.js"], ["tailwindcss", "Tailwind"]]]
   ],
 
-  "experience": [
-    {
-      "org": "NRSC · ISRO",
-      "role": "AI Systems Engineering Intern",
-      "when": "2026.05 — 2026.06",
-      "where": "Hyderabad",
-      "points": [
-        "Built VYOM, an LLM-driven agentic GIS system (LangGraph, FastAPI, PostGIS) that answers natural-language queries over ResourceSat-2/2A imagery.",
-        "Automated flood, wildfire, drought and landslide analysis across 6 disaster events and 300+ satellite scenes via a QGIS plugin."
-      ]
-    },
-    {
-      "org": "ATLAS AI LABS",
-      "role": "Founding Engineer, Backend · SSIP 2.0 grantee",
-      "when": "2026.04 — 2026.08",
-      "where": "Ahmedabad",
-      "points": [
-        "Owned backend architecture end-to-end: service design, data modelling, containerised deploys and CI/CD.",
-        "Built microservices exposing agentic AI, LLM and deep-learning services behind production REST APIs for healthcare and fintech products."
-      ]
-    },
-    {
-      "org": "RADHE ENGINEERING WORKS",
-      "role": "Lead Software Engineer · part-time",
-      "when": "2024.09 — now",
-      "where": "Ahmedabad",
-      "points": [
-        "Sole engineer on a full-stack ERP (inventory, orders, production tracking) that replaced paper-based workflows.",
-        "Own the whole lifecycle, from requirements and schema design to deploys and maintenance, for a system 20+ employees use daily."
-      ]
-    }
-  ],
-
-  "projects": [
-    {
-      "id": "proxima",
-      "name": "PROXIMA",
-      "tagline": "scalable real-time virtual office",
-      "url": "https://github.com/KRISH-V-0610/Proxima",
-      "featured": true,
-      "points": [
-        "Server-authoritative 20 Hz tick loop with client-side prediction and reconciliation",
-        "Stateless Node.js replicas behind an Nginx L7 balancer: sticky sessions, WS upgrade, TLS",
-        "Redis pub/sub fans presence and position events out across every instance",
-        "HMAC-signed WS tickets, heartbeat eviction and Redis-backed rate limiting",
-        "Zero-downtime rolling deploys with multi-stage Docker images and GitHub Actions"
-      ],
-      "chips": ["20 Hz tick", "N stateless replicas", "0-downtime deploys"],
-      "tags": ["TypeScript", "Node.js", "WebSockets", "WebRTC", "PostgreSQL", "Redis", "Nginx", "Docker"]
-    },
-    {
-      "id": "git-objects-analyzer",
-      "name": "GIT OBJECTS ANALYZER",
-      "tagline": "git internals, visualised",
-      "url": "https://github.com/KRISH-V-0610/git-objects-analyzer",
-      "points": [
-        "CLI + interactive GUI that streams and inspects blobs, commits and trees",
-        "Published on npm: 1.13 MB, 250+ downloads"
-      ],
-      "tags": ["Node.js", "Git core", "Streams", "EJS"]
-    },
-    {
-      "id": "docling-ai",
-      "name": "DOCLING AI",
-      "tagline": "agentic manuscript formatter",
-      "url": "https://github.com/KRISH-V-0610/DoclingAI",
-      "points": [
-        "6-agent pipeline: parse, detect structure, check grammar, process citations",
-        "DOCX to APA, IEEE, MLA or Chicago, with compliance scoring"
-      ],
-      "tags": ["Python", "FastAPI", "Agno", "Groq", "React"]
-    }
-  ],
-
-  "achievements": [
-    ["2026.03", "3RD IN TRACK", "HackaMined 2026, Nirma University", "2300+ registrations", false],
-    ["2025.12", "FINALIST", "IIT Bombay Techfest × Jio Financial Services FinAgent Hackathon", "", false],
-    ["2025.08", "NATIONAL RUNNER-UP", "ISRO Bharatiya Antariksh Hackathon 2025", "2nd of 8400+ teams", true],
-    ["2025.03", "1ST PRIZE", "Breach 2025 FinTech Hackathon, PDEU", "", false],
-    ["2025.03", "3RD OVERALL", "HackNUthon 6.0, Nirma University", "2nd in track", false]
-  ],
-
   "links": [
     ["portfolio", "", "PORTFOLIO", "https://krish-vaghasia.vercel.app"],
     ["linkedin", "", "LINKEDIN", "https://www.linkedin.com/in/krish-vaghasia-4b14562a9/"],
@@ -119,7 +83,6 @@
     ["leetcode", "leetcode", "LEETCODE", "https://leetcode.com/krish_v_0610"],
     ["codeforces", "codeforces", "CODEFORCES", "https://codeforces.com/profile/KRISH_V_0610"],
     ["stackoverflow", "stackoverflow", "STACK OVERFLOW", "https://stackoverflow.com/users/26774030"],
-    ["npm", "npm", "NPM", "https://www.npmjs.com/package/git-objects-analyzer"],
     ["instagram", "instagram", "INSTAGRAM", "https://instagram.com/krish_v_007"]
   ]
 }
