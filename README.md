@@ -15,10 +15,6 @@
   <a href="https://krish-vaghasia.vercel.app"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-portfolio.svg?v=3" alt="Portfolio"></a>
   <a href="https://www.linkedin.com/in/krish-vaghasia-4b14562a9/"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-linkedin.svg?v=3" alt="LinkedIn"></a>
   <a href="mailto:vaghasiakrish01@gmail.com"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-email.svg?v=3" alt="Email"></a>
-  <a href="https://leetcode.com/krish_v_0610"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-leetcode.svg?v=3" alt="LeetCode"></a>
-  <a href="https://codeforces.com/profile/KRISH_V_0610"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-codeforces.svg?v=3" alt="Codeforces"></a>
-  <a href="https://stackoverflow.com/users/26774030"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-stackoverflow.svg?v=3" alt="Stack Overflow"></a>
-  <a href="https://instagram.com/krish_v_007"><img src="https://raw.githubusercontent.com/KRISH-V-0610/KRISH-V-0610/output/btn-instagram.svg?v=3" alt="Instagram"></a>
   <br><br>
   <img src="https://komarev.com/ghpvc/?username=krish-v-0610&label=PROFILE%20VIEWS&color=21262d&style=flat-square" alt="Profile views">
 </p>
